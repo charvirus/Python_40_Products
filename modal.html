@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Show Modal</button>
+    <dialog>
+      Hello! I'm a modal!
+      <form method="dialog">
+        <button value="confirm">Confirm</button>
+        <button value="close">Close</button>
+      </form>
+    </dialog>
+  </body>
+  <script>
+    const button = document.querySelector("button");
+    const dialog = document.querySelector("dialog");
+    button.addEventListener("click", () => {
+      dialog.showModal();
+    });
+
+    dialog.addEventListener("close", () => {
+      console.log(dialog.returnValue);
+    });
+  </script>
+</html>
