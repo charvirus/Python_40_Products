@@ -3,7 +3,7 @@ import zipfile
 
 passwd_string = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-zfile = zipfile.ZipFile(r'암호.zip')
+zfile = zipfile.ZipFile(r'암호.zip') # 압축 파일을 불러옴
 
 for len in range(1, 6):
     to_attempt = itertools.product(passwd_string, repeat=len)
