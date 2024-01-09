@@ -14,7 +14,7 @@ def get_exchange_rate(target1, target2):
     scraper = cloudscraper.create_scraper()
     html = scraper.get(url_base).content
     soup = BeautifulSoup(html, 'html.parser')
-    dollar = soup.find('span', {'data-test': 'instrument-price-last'})
+    dollar = soup.find('span', {'id': 'last_last'})
     print(dollar.text)
 
 
